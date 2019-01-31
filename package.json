@@ -1,0 +1,27 @@
+{
+  "name": "aman_backend",
+  "version": "1.0.0",
+  "description": "Aman App Backend services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cryptr": "^4.0.2",
+    "date-and-time": "^0.6.3",
+    "express": "^4.16.4",
+    "fabric-client": "^1.0.3",
+    "grpc": "^1.9.1",
+    "jsonwebtoken": "^8.4.0",
+    "langdetect": "^0.2.1",
+    "log4js": "^3.0.6",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "node-google-translate-skidz": "^1.1.2",
+    "nodemailer": "^5.1.1",
+    "sendotp": "^1.2.9"
+  }
+}

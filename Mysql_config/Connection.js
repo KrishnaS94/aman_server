@@ -1,0 +1,23 @@
+const db = require('./DBConfig.js');
+function connectionCheck() {
+   return new Promise((resolve,reject) => {
+     db.getConnection(function(err, connection) {
+              if(err) {
+                  if(connection) connection.release();
+                reject(err)
+             } else  {
+                 console.log("connected");
+               resolve('success')
+             }
+         })
+     })
+ }
+function connectionRelease() {
+   db.on('release', function (connection) {
+       console.log('Connection %d released', connection.threadId);
+   });
+}
+module.exports = {
+   connectionCheck:connectionCheck(),
+   connectionRelease:connectionRelease()
+}
